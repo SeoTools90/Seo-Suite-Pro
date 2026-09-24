@@ -1,219 +1,127 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pro Robots.txt Generator - SEO Utilities</title>
-    <meta name="description" content="Generate valid, custom robots.txt files instantly for Googlebot, Bing, and search engine crawlers.">
-    
-    <!-- Tailwind CSS -->
+    <title>Robots.txt Generator - SEO Suite Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        body {
-            background-color: #080b11;
-            color: #f3f4f6;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.65);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            backdrop-filter: blur(16px);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+    <!-- Adsterra Social Bar Code -->
+    <script src="https://canvassanymorephotography.com/78/c8/be/78c8bef14f9aaa001b421ca7cf80e1a1.js"></script>
 </head>
-<body class="min-h-screen flex flex-col justify-between antialiased">
+<body class="bg-stone-950 text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-8">
 
-    <!-- Header Navigation -->
-    <header class="border-b border-gray-800/80 bg-slate-950/50 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30">
-                    <i class="fa-solid fa-robot text-lg"></i>
-                </div>
-                <span class="text-2xl font-black tracking-tight text-white">SEO Suite<span class="text-indigo-500">.Pro</span></span>
+    <header class="max-w-6xl mx-auto w-full flex justify-between items-center mb-10">
+        <div class="flex items-center gap-3">
+            <div class="bg-amber-500/20 p-3 rounded-xl border border-amber-500/30 text-amber-400">
+                <i class="fa-solid fa-robot text-2xl"></i>
             </div>
-            <span class="text-xs bg-emerald-950/80 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-800/60 font-medium">
-                <i class="fa-solid fa-check-circle mr-1"></i> Crawler Ready
-            </span>
+            <h1 class="text-2xl font-bold tracking-wide">SEO Suite <span class="text-amber-400">.Pro</span></h1>
         </div>
+        <span class="bg-amber-500/10 text-amber-400 text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20">
+            Robots Engine
+        </span>
     </header>
 
-    <!-- Top Banner Ad Space -->
-    <div class="my-4 text-center">
-        <!-- ============================================== -->
-        <!-- Paste Your Adsterra / Monetag Top Banner Code Here -->
-        <!-- ============================================== -->
-    </div>
-
-    <!-- Main Content -->
-    <main class="max-w-5xl mx-auto px-4 py-10 w-full">
-        <!-- Title Section -->
-        <div class="text-center mb-10">
-            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 gradient-text">
+    <main class="max-w-4xl mx-auto w-full space-y-8">
+        <div class="text-center space-y-2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-300">
                 Robots.txt Generator
-            </h1>
-            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
-                Create a perfectly structured Robots.txt file to guide search engine crawlers on your website.
-            </p>
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base">Create customized Robots.txt files to guide search engines.</p>
         </div>
 
-        <div class="grid lg:grid-cols-2 gap-8">
-            <!-- Form Input Card -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-5">
-                <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
-                    <i class="fa-solid fa-sliders text-indigo-400"></i> Configuration
-                </h3>
-
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Default Robots Access</label>
-                    <select id="defaultAccess" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 focus:outline-none focus:border-indigo-500 text-sm transition">
-                        <option value="allow">Allow All Robots (Recommended)</option>
-                        <option value="refuse">Refuse All Robots</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Crawl Delay (Seconds)</label>
-                    <select id="crawlDelay" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 focus:outline-none focus:border-indigo-500 text-sm transition">
-                        <option value="none">No Delay</option>
-                        <option value="5">5 Seconds</option>
-                        <option value="10">10 Seconds</option>
-                        <option value="20">20 Seconds</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Sitemap URL (Optional)</label>
-                    <input type="url" id="sitemapUrl" placeholder="https://example.com/sitemap.xml" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
-                </div>
-
-                <div>
-                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Restricted Directories (e.g. /admin/, /private/)</label>
-                    <input type="text" id="restrictedDirs" placeholder="/cgi-bin/, /admin/, /wp-admin/" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
-                </div>
-
-                <button onclick="generateRobotsTxt()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-gears"></i> Generate Robots.txt
-                </button>
+        <div class="bg-stone-900/80 backdrop-blur-md p-6 rounded-2xl border border-amber-500/20 shadow-2xl space-y-4">
+            <div>
+                <label class="block text-sm font-semibold mb-1 text-slate-300">Default Robot Access</label>
+                <select id="robotAccess" class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-slate-200 text-sm focus:outline-none focus:border-amber-500">
+                    <option value="allow">Allow All Robots</option>
+                    <option value="disallow">Refuse All Robots</option>
+                </select>
+            </div>
+            <div>
+                <label class="block text-sm font-semibold mb-1 text-slate-300">Sitemap URL (Optional)</label>
+                <input type="text" id="sitemapUrl" class="w-full bg-stone-950 border border-stone-800 rounded-xl p-3 text-slate-200 text-sm focus:outline-none focus:border-amber-500" placeholder="https://example.com/sitemap.xml">
             </div>
 
-            <!-- Output Card -->
-            <div class="glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
-                <div>
-                    <div class="flex justify-between items-center border-b border-gray-800 pb-3 mb-4">
-                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
-                            <i class="fa-solid fa-file-code text-emerald-400"></i> Generated Code
-                        </h3>
-                        <span class="text-xs text-gray-500 font-mono">robots.txt</span>
-                    </div>
-                    <textarea id="outputCode" readonly rows="12" class="w-full bg-slate-950/90 border border-gray-800 rounded-xl p-4 text-emerald-400 font-mono text-xs focus:outline-none resize-none leading-relaxed" placeholder="Click 'Generate Robots.txt' to view output..."></textarea>
-                </div>
+            <button onclick="generateRobots()" class="w-full bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all">
+                Generate Robots.txt
+            </button>
 
-                <div class="flex gap-3 mt-4">
-                    <button onclick="copyCode()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 rounded-xl transition border border-gray-700 flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-solid fa-copy"></i> Copy Code
-                    </button>
-                    <button onclick="downloadRobotsTxt()" class="w-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-medium py-3 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-solid fa-download"></i> Download File
-                    </button>
+            <div id="outputContainer" class="hidden space-y-3 pt-4">
+                <textarea id="robotsOutput" rows="6" readonly class="w-full bg-stone-950 border border-stone-800 rounded-xl p-4 text-amber-400 font-mono text-xs focus:outline-none"></textarea>
+                <button onclick="copyRobots()" class="bg-stone-800 hover:bg-stone-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-medium border border-stone-700">
+                    <i class="fa-regular fa-copy mr-2"></i>Copy Code
+                </button>
+            </div>
+        </div>
+
+        <!-- Adsterra Smart Link CTA Banner -->
+        <div class="text-center my-6">
+            <a href="https://www.profitableratecpmnetwork.com/h9kp7nq9?key=5406aeab637852633d3e1dc3378eb31e" target="_blank" class="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg inline-block transition-transform transform hover:scale-105">
+                🔥 Get Advanced Webmaster Setup Toolkit
+            </a>
+        </div>
+
+        <!-- Adsterra 728x90 Banner Code -->
+        <div class="my-6 text-center flex justify-center overflow-hidden">
+            <script>
+              atOptions = {
+                'key' : '675207f1b7b74b061fb68b6a18615412',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://canvassanymorephotography.com/675207f1b7b74b061fb68b6a18615412/invoke.js"></script>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-stone-900/80 backdrop-blur-md rounded-2xl p-6 border border-amber-500/30 shadow-xl max-w-4xl mx-auto text-slate-200">
+            <h2 class="text-2xl font-bold mb-6 text-amber-400">Frequently Asked Questions (FAQs)</h2>
+            <div class="space-y-4">
+                <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">1. What is a Robots.txt file?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">A Robots.txt file tells search engine crawlers which pages or files they can or cannot request from your site.</p>
+                </div>
+                <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">2. Where should I upload the Robots.txt file?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Upload it directly to the root directory of your website (e.g., yourdomain.com/robots.txt).</p>
+                </div>
+                <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">3. Will a Robots.txt file hide my site from Google?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">It instructs crawlers not to crawl blocked pages, but shouldn't be used as a security mechanism for private content.</p>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Content & FAQ Section -->
-<div class="mt-12 bg-stone-900/80 backdrop-blur-md rounded-2xl p-6 border border-amber-500/30 shadow-xl max-w-4xl mx-auto text-slate-200">
-    <h2 class="text-2xl font-bold mb-6 text-amber-400">Frequently Asked Questions (FAQs)</h2>
-    
-    <div class="space-y-4">
-        <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">1. What is a Robots.txt file?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">A Robots.txt file tells search engine crawlers (like Googlebot) which pages or files they can or cannot request from your site. It helps prevent bandwidth overload and protects sensitive directories.</p>
-        </div>
-
-        <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">2. Where should I upload the Robots.txt file?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">After generating and downloading your file, upload it directly to the root directory of your website (e.g., yourdomain.com/robots.txt).</p>
-        </div>
-
-        <div class="bg-stone-800/50 p-4 rounded-xl border border-stone-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">3. Will a Robots.txt file hide my site from Google?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">It instructs search crawlers not to crawl blocked pages, but it should not be used as a security mechanism to hide private content. Use password protection or noindex tags for strict privacy.</p>
-        </div>
-    </div>
-</div>
-    <!-- Bottom Banner Ad Space -->
-    <div class="my-4 text-center">
-        <!-- ============================================== -->
-        <!-- Paste Your Adsterra / Monetag Bottom Banner Code Here -->
-        <!-- ============================================== -->
-    </div>
-
-    <!-- Footer -->
-    <footer class="border-t border-gray-800/80 py-6 bg-slate-950/40 text-center text-gray-500 text-xs">
-        <p>&copy; 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
+    <footer class="mt-16 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6">
+        <p>© 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
     </footer>
 
-    <!-- Logic Script -->
     <script>
-        function generateRobotsTxt() {
-            const defaultAccess = document.getElementById('defaultAccess').value;
-            const crawlDelay = document.getElementById('crawlDelay').value;
-            const sitemapUrl = document.getElementById('sitemapUrl').value.trim();
-            const restrictedDirs = document.getElementById('restrictedDirs').value.trim();
-
-            let txt = `# Robots.txt generated via SEO Suite Pro\nUser-agent: *\n`;
-
-            if (defaultAccess === 'refuse') {
-                txt += `Disallow: /\n`;
+        function generateRobots() {
+            const access = document.getElementById('robotAccess').value;
+            const sitemap = document.getElementById('sitemapUrl').value;
+            let code = `User-agent: *\n`;
+            if (access === 'allow') {
+                code += `Disallow:\n`;
             } else {
-                txt += `Disallow:\n`;
+                code += `Disallow: /\n`;
             }
-
-            if (crawlDelay !== 'none') {
-                txt += `Crawl-delay: ${crawlDelay}\n`;
+            if (sitemap) {
+                code += `Sitemap: ${sitemap}\n`;
             }
-
-            if (restrictedDirs) {
-                const dirs = restrictedDirs.split(',');
-                dirs.forEach(dir => {
-                    if (dir.trim()) {
-                        txt += `Disallow: ${dir.trim()}\n`;
-                    }
-                });
-            }
-
-            if (sitemapUrl) {
-                txt += `\nSitemap: ${sitemapUrl}\n`;
-            }
-
-            document.getElementById('outputCode').value = txt;
+            document.getElementById('robotsOutput').value = code;
+            document.getElementById('outputContainer').classList.remove('hidden');
         }
-
-        function copyCode() {
-            const output = document.getElementById('outputCode');
-            if (!output.value) return;
-            output.select();
+        function copyRobots() {
+            const copyText = document.getElementById('robotsOutput');
+            copyText.select();
             document.execCommand('copy');
-            alert('Robots.txt code copied to clipboard!');
-        }
-
-        function downloadRobotsTxt() {
-            const text = document.getElementById('outputCode').value;
-            if (!text) return;
-            const blob = new Blob([text], { type: 'text/plain' });
-            const a = document.createElement('a');
-            a.href = URL.createObjectURL(blob);
-            a.download = 'robots.txt';
-            a.click();
+            alert('Robots.txt copied!');
         }
     </script>
 </body>
