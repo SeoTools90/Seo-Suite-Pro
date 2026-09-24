@@ -1,183 +1,134 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word & Character Counter - Modern Text Analyzer</title>
-    <meta name="description" content="Free online word counter, character count, and real-time sentence analyzer.">
-    
-    <!-- Tailwind CSS -->
+    <title>XML Sitemap Generator - SEO Suite Pro</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Font: Plus Jakarta Sans -->
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
-
     <style>
         body {
-            background-color: #061412;
-            color: #ecfdf5;
-            font-family: 'Plus Jakarta Sans', sans-serif;
-        }
-        .emerald-card {
-            background: rgba(11, 36, 31, 0.7);
-            border: 1px solid rgba(16, 185, 129, 0.15);
-            backdrop-filter: blur(20px);
-        }
-        .gradient-teal {
-            background: linear-gradient(135deg, #2dd4bf 0%, #10b981 50%, #059669 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            background: #0f172a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
     </style>
 </head>
-<body class="min-h-screen flex flex-col justify-between antialiased">
+<body class="text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-8">
 
-    <!-- Header Navigation -->
-    <header class="border-b border-emerald-900/40 bg-emerald-950/40 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-teal-500 to-emerald-400 flex items-center justify-center font-bold text-slate-950 shadow-lg shadow-teal-500/20">
-                    <i class="fa-solid fa-align-left text-lg"></i>
-                </div>
-                <span class="text-2xl font-black tracking-tight text-white">SEO Suite<span class="text-teal-400">.Pro</span></span>
+    <!-- Header & Navigation -->
+    <header class="max-w-6xl mx-auto w-full flex justify-between items-center mb-10">
+        <div class="flex items-center gap-3">
+            <div class="bg-rose-500/20 p-3 rounded-xl border border-rose-500/30 text-rose-400">
+                <i class="fa-solid fa-sitemap text-2xl"></i>
             </div>
-            <span class="text-xs bg-teal-950/80 text-teal-300 px-3 py-1.5 rounded-full border border-teal-700/50 font-medium">
-                <i class="fa-solid fa-feather mr-1"></i> Text Metrics Engine
-            </span>
+            <h1 class="text-2xl font-bold tracking-wide">SEO Suite <span class="text-rose-400">.Pro</span></h1>
         </div>
+        <span class="bg-rose-500/10 text-rose-400 text-xs font-semibold px-3 py-1 rounded-full border border-rose-500/20">
+            Sitemap Engine
+        </span>
     </header>
 
-    <!-- Top Banner Ad Space -->
-    <div class="my-4 text-center">
-        <!-- ============================================== -->
-        <!-- Paste Your Adsterra / Monetag Top Banner Code Here -->
-        <!-- ============================================== -->
-    </div>
-
-    <!-- Main Content Area -->
-    <main class="max-w-5xl mx-auto px-4 py-10 w-full">
-        <!-- Title Section -->
-        <div class="text-center mb-10">
-            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 gradient-teal">
-                Word & Character Counter
-            </h1>
-            <p class="text-emerald-300/70 max-w-xl mx-auto text-sm sm:text-base">
-                Instant analytics for writers, bloggers, and SEO specialists with real-time accuracy.
+    <!-- Main Generator Container -->
+    <main class="max-w-4xl mx-auto w-full space-y-8">
+        
+        <!-- Tool Title -->
+        <div class="text-center space-y-2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-amber-300">
+                XML Sitemap Generator
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base">
+                Create search-engine compliant XML sitemaps instantly to boost indexing.
             </p>
         </div>
 
-        <!-- Stat Display Cards (Cyber Emerald Theme) -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-            <div class="emerald-card p-5 rounded-2xl text-center border-t-2 border-t-teal-400 shadow-lg shadow-teal-950/50">
-                <span class="block text-3xl font-extrabold text-teal-300 mb-1 font-mono" id="statWords">0</span>
-                <span class="text-xs uppercase tracking-wider text-emerald-400/80 font-bold">Total Words</span>
+        <!-- Input Box Section -->
+        <div class="bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-rose-500/20 shadow-2xl space-y-6">
+            <div>
+                <label class="block text-sm font-semibold mb-2 text-slate-300">Enter Website URLs (One URL per line):</label>
+                <textarea id="urlInput" rows="6" class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-200 text-sm focus:outline-none focus:border-rose-500 transition-colors" placeholder="https://example.com&#10;https://example.com/about&#10;https://example.com/contact"></textarea>
             </div>
-            <div class="emerald-card p-5 rounded-2xl text-center border-t-2 border-t-emerald-400 shadow-lg shadow-emerald-950/50">
-                <span class="block text-3xl font-extrabold text-emerald-300 mb-1 font-mono" id="statChars">0</span>
-                <span class="text-xs uppercase tracking-wider text-emerald-400/80 font-bold">Characters</span>
-            </div>
-            <div class="emerald-card p-5 rounded-2xl text-center border-t-2 border-t-cyan-400 shadow-lg shadow-cyan-950/50">
-                <span class="block text-3xl font-extrabold text-cyan-300 mb-1 font-mono" id="statSentences">0</span>
-                <span class="text-xs uppercase tracking-wider text-emerald-400/80 font-bold">Sentences</span>
-            </div>
-            <div class="emerald-card p-5 rounded-2xl text-center border-t-2 border-t-lime-400 shadow-lg shadow-lime-950/50">
-                <span class="block text-3xl font-extrabold text-lime-300 mb-1 font-mono" id="statReadTime">0 min</span>
-                <span class="text-xs uppercase tracking-wider text-emerald-400/80 font-bold">Read Time</span>
+
+            <button onclick="generateSitemap()" class="w-full bg-gradient-to-r from-rose-500 to-amber-500 hover:from-rose-600 hover:to-amber-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                Generate XML Sitemap
+            </button>
+
+            <!-- Output Box Section -->
+            <div id="outputContainer" class="hidden space-y-3">
+                <label class="block text-sm font-semibold text-slate-300">Generated XML Code:</label>
+                <textarea id="xmlOutput" rows="8" readonly class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-rose-400 font-mono text-xs focus:outline-none"></textarea>
+                <button onclick="copySitemap()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-4 py-2 rounded-lg text-sm font-medium transition-colors border border-slate-700">
+                    <i class="fa-regular fa-copy mr-2"></i>Copy Sitemap Code
+                </button>
             </div>
         </div>
 
-        <!-- Text Input Box -->
-        <div class="emerald-card p-6 sm:p-8 rounded-3xl">
-            <div class="flex justify-between items-center mb-4">
-                <label class="text-xs font-bold uppercase text-teal-300 tracking-wider">Type or Paste Text Below</label>
-                <span class="text-xs text-emerald-400/60"><i class="fa-solid fa-clock mr-1"></i> Live Analysis</span>
-            </div>
+        <!-- Adsterra / Monetag Banner Code Placeholder -->
+        <div class="my-6 text-center">
+            <!-- Paste Your Adsterra / Monetag Code Here -->
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-rose-500/30 shadow-xl max-w-4xl mx-auto text-slate-200">
+            <h2 class="text-2xl font-bold mb-6 text-rose-400">Frequently Asked Questions (FAQs)</h2>
             
-            <textarea id="textInput" rows="11" 
-                placeholder="Start typing or paste your content here..." 
-                class="w-full bg-slate-950/90 border border-emerald-900/60 rounded-2xl p-5 text-emerald-100 placeholder-emerald-800 focus:outline-none focus:border-teal-400 transition resize-y font-mono text-sm leading-relaxed"></textarea>
-            
-            <!-- Actions Toolbar -->
-            <div class="flex flex-wrap justify-between items-center gap-4 mt-6 pt-4 border-t border-emerald-900/40">
-                <div class="text-xs text-emerald-400/80">
-                    <span id="charNoSpace" class="font-bold text-teal-300">0</span> characters (without spaces)
+            <div class="space-y-4">
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">1. What is an XML Sitemap?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">An XML Sitemap is a roadmap of your website that leads search engines to all your important pages. It allows crawlers to index your site faster and more efficiently.</p>
                 </div>
-                <div class="flex gap-3">
-                    <button onclick="clearText()" class="px-4 py-2.5 bg-emerald-950/80 hover:bg-emerald-900 text-emerald-300 text-sm font-medium rounded-xl transition border border-emerald-800/80 flex items-center gap-1.5">
-                        <i class="fa-solid fa-rotate-left text-red-400"></i> Clear
-                    </button>
-                    <button onclick="copyText()" class="px-5 py-2.5 bg-gradient-to-r from-teal-500 to-emerald-500 hover:from-teal-400 hover:to-emerald-400 text-slate-950 text-sm font-extrabold rounded-xl shadow-lg shadow-teal-500/20 transition flex items-center gap-1.5">
-                        <i class="fa-solid fa-copy"></i> Copy Content
-                    </button>
+
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">2. How do I submit my sitemap to Google Search Console?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Copy the URL of your sitemap (e.g., yourdomain.com/sitemap.xml), log in to Google Search Console, navigate to the "Sitemaps" section, paste the link, and click Submit.</p>
+                </div>
+
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">3. How often should I update my sitemap?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">You should regenerate and update your sitemap whenever you add new pages, blog posts, or make significant structural changes to your site.</p>
                 </div>
             </div>
         </div>
+
     </main>
 
-    <!-- Content & FAQ Section -->
-<div class="mt-12 bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-rose-500/30 shadow-xl max-w-4xl mx-auto text-slate-200">
-    <h2 class="text-2xl font-bold mb-6 text-rose-400">Frequently Asked Questions (FAQs)</h2>
-    
-    <div class="space-y-4">
-        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">1. What is an XML Sitemap?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">An XML Sitemap is a roadmap of your website that leads search engines to all your important pages. It allows crawlers to index your site faster and more efficiently.</p>
-        </div>
-
-        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">2. How do I submit my sitemap to Google Search Console?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">Copy the URL of your sitemap (e.g., yourdomain.com/sitemap.xml), log in to Google Search Console, navigate to the "Sitemaps" section, paste the link, and click Submit.</p>
-        </div>
-
-        <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
-            <h3 class="font-semibold text-lg text-white mb-2">3. How often should I update my sitemap?</h3>
-            <p class="text-slate-300 text-sm leading-relaxed">You should regenerate and update your sitemap whenever you add new pages, blog posts, or make significant structural changes to your site.</p>
-        </div>
-    </div>
-</div>
-    <!-- Bottom Banner Ad Space -->
-    <div class="my-4 text-center">
-        <!-- ============================================== -->
-        <!-- Paste Your Adsterra / Monetag Bottom Banner Code Here -->
-        <!-- ============================================== -->
-    </div>
-
-    <!-- Footer -->
-    <footer class="border-t border-emerald-900/40 py-6 bg-emerald-950/60 text-center text-emerald-500/60 text-xs">
-        <p>&copy; 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
+    <!-- Footer Section -->
+    <footer class="mt-16 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6">
+        <p>© 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
     </footer>
 
+    <!-- JavaScript Functionality -->
     <script>
-        const input = document.getElementById('textInput');
-        input.addEventListener('input', analyzeText);
+        function generateSitemap() {
+            const urls = document.getElementById('urlInput').value.trim().split('\n');
+            if (urls.length === 0 || urls[0] === '') {
+                alert('Please enter at least one URL.');
+                return;
+            }
 
-        function analyzeText() {
-            const text = input.value;
-            const trimmed = text.trim();
-            const words = trimmed ? trimmed.split(/\s+/).length : 0;
-            const chars = text.length;
-            const charsNoSpaceCount = text.replace(/\s+/g, '').length;
-            const sentences = trimmed ? (text.match(/[.!?]+/g) || []).length : 0;
-            const readTimeMinutes = Math.ceil(words / 200);
+            const today = new Date().toISOString().split('T')[0];
+            let xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n`;
 
-            document.getElementById('statWords').innerText = words.toLocaleString();
-            document.getElementById('statChars').innerText = chars.toLocaleString();
-            document.getElementById('statSentences').innerText = sentences.toLocaleString();
-            document.getElementById('statReadTime').innerText = (words > 0 ? readTimeMinutes : 0) + ' min';
-            document.getElementById('charNoSpace').innerText = charsNoSpaceCount.toLocaleString();
+            urls.forEach(url => {
+                let cleanUrl = url.trim();
+                if (cleanUrl) {
+                    if (!cleanUrl.startsWith('http://') && !cleanUrl.startsWith('https://')) {
+                        cleanUrl = 'https://' + cleanUrl;
+                    }
+                    xml += `  <url>\n    <loc>${cleanUrl}</loc>\n    <lastmod>${today}</lastmod>\n    <priority>0.80</priority>\n  </url>\n`;
+                }
+            });
+
+            xml += `</urlset>`;
+
+            document.getElementById('xmlOutput').value = xml;
+            document.getElementById('outputContainer').classList.remove('hidden');
         }
 
-        function clearText() {
-            input.value = '';
-            analyzeText();
-        }
-
-        function copyText() {
-            if (!input.value) return;
-            input.select();
+        function copySitemap() {
+            const copyText = document.getElementById('xmlOutput');
+            copyText.select();
             document.execCommand('copy');
-            alert('Text copied to clipboard!');
+            alert('Sitemap XML copied to clipboard!');
         }
     </script>
 </body>
