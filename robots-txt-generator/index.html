@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Robots.txt Generator - SEO Utilities</title>
+    <meta name="description" content="Generate valid, custom robots.txt files instantly for Googlebot, Bing, and search engine crawlers.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #080b11;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Header Navigation -->
+    <header class="border-b border-gray-800/80 bg-slate-950/50 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-robot text-lg"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tight text-white">SEO Suite<span class="text-indigo-500">.Pro</span></span>
+            </div>
+            <span class="text-xs bg-emerald-950/80 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-800/60 font-medium">
+                <i class="fa-solid fa-check-circle mr-1"></i> Crawler Ready
+            </span>
+        </div>
+    </header>
+
+    <!-- Top Banner Ad Space -->
+    <div class="my-4 text-center">
+        <!-- ============================================== -->
+        <!-- Paste Your Adsterra / Monetag Top Banner Code Here -->
+        <!-- ============================================== -->
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-10 w-full">
+        <!-- Title Section -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 gradient-text">
+                Robots.txt Generator
+            </h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
+                Create a perfectly structured Robots.txt file to guide search engine crawlers on your website.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Form Input Card -->
+            <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+                    <i class="fa-solid fa-sliders text-indigo-400"></i> Configuration
+                </h3>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Default Robots Access</label>
+                    <select id="defaultAccess" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 focus:outline-none focus:border-indigo-500 text-sm transition">
+                        <option value="allow">Allow All Robots (Recommended)</option>
+                        <option value="refuse">Refuse All Robots</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Crawl Delay (Seconds)</label>
+                    <select id="crawlDelay" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 focus:outline-none focus:border-indigo-500 text-sm transition">
+                        <option value="none">No Delay</option>
+                        <option value="5">5 Seconds</option>
+                        <option value="10">10 Seconds</option>
+                        <option value="20">20 Seconds</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Sitemap URL (Optional)</label>
+                    <input type="url" id="sitemapUrl" placeholder="https://example.com/sitemap.xml" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Restricted Directories (e.g. /admin/, /private/)</label>
+                    <input type="text" id="restrictedDirs" placeholder="/cgi-bin/, /admin/, /wp-admin/" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
+                </div>
+
+                <button onclick="generateRobotsTxt()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-gears"></i> Generate Robots.txt
+                </button>
+            </div>
+
+            <!-- Output Card -->
+            <div class="glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center border-b border-gray-800 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-file-code text-emerald-400"></i> Generated Code
+                        </h3>
+                        <span class="text-xs text-gray-500 font-mono">robots.txt</span>
+                    </div>
+                    <textarea id="outputCode" readonly rows="12" class="w-full bg-slate-950/90 border border-gray-800 rounded-xl p-4 text-emerald-400 font-mono text-xs focus:outline-none resize-none leading-relaxed" placeholder="Click 'Generate Robots.txt' to view output..."></textarea>
+                </div>
+
+                <div class="flex gap-3 mt-4">
+                    <button onclick="copyCode()" class="w-1/2 bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 rounded-xl transition border border-gray-700 flex items-center justify-center gap-2 text-sm">
+                        <i class="fa-solid fa-copy"></i> Copy Code
+                    </button>
+                    <button onclick="downloadRobotsTxt()" class="w-1/2 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-medium py-3 rounded-xl shadow-lg shadow-emerald-600/20 transition flex items-center justify-center gap-2 text-sm">
+                        <i class="fa-solid fa-download"></i> Download File
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Banner Ad Space -->
+    <div class="my-4 text-center">
+        <!-- ============================================== -->
+        <!-- Paste Your Adsterra / Monetag Bottom Banner Code Here -->
+        <!-- ============================================== -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/80 py-6 bg-slate-950/40 text-center text-gray-500 text-xs">
+        <p>&copy; 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        function generateRobotsTxt() {
+            const defaultAccess = document.getElementById('defaultAccess').value;
+            const crawlDelay = document.getElementById('crawlDelay').value;
+            const sitemapUrl = document.getElementById('sitemapUrl').value.trim();
+            const restrictedDirs = document.getElementById('restrictedDirs').value.trim();
+
+            let txt = `# Robots.txt generated via SEO Suite Pro\nUser-agent: *\n`;
+
+            if (defaultAccess === 'refuse') {
+                txt += `Disallow: /\n`;
+            } else {
+                txt += `Disallow:\n`;
+            }
+
+            if (crawlDelay !== 'none') {
+                txt += `Crawl-delay: ${crawlDelay}\n`;
+            }
+
+            if (restrictedDirs) {
+                const dirs = restrictedDirs.split(',');
+                dirs.forEach(dir => {
+                    if (dir.trim()) {
+                        txt += `Disallow: ${dir.trim()}\n`;
+                    }
+                });
+            }
+
+            if (sitemapUrl) {
+                txt += `\nSitemap: ${sitemapUrl}\n`;
+            }
+
+            document.getElementById('outputCode').value = txt;
+        }
+
+        function copyCode() {
+            const output = document.getElementById('outputCode');
+            if (!output.value) return;
+            output.select();
+            document.execCommand('copy');
+            alert('Robots.txt code copied to clipboard!');
+        }
+
+        function downloadRobotsTxt() {
+            const text = document.getElementById('outputCode').value;
+            if (!text) return;
+            const blob = new Blob([text], { type: 'text/plain' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'robots.txt';
+            a.click();
+        }
+    </script>
+</body>
+</html>
