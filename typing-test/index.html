@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Speed Test Pro - SEO Suite Pro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Adsterra Social Bar Code -->
+    <script src="https://canvassanymorephotography.com/78/c8/be/78c8bef14f9aaa001b421ca7cf80e1a1.js"></script>
+    <style>
+        #textDisplay span {
+            display: inline;
+            font-size: 1.25rem;
+            line-height: 2rem;
+            letter-spacing: 0.05em;
+        }
+        #textDisplay span.space {
+            display: inline-block;
+            width: 0.6rem;
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col justify-between p-4 md:p-8">
+
+    <!-- Header Navigation -->
+    <header class="max-w-6xl mx-auto w-full flex justify-between items-center mb-8">
+        <div class="flex items-center gap-3">
+            <div class="bg-violet-500/20 p-3 rounded-xl border border-violet-500/30 text-violet-400">
+                <i class="fa-solid fa-keyboard text-2xl"></i>
+            </div>
+            <h1 class="text-2xl font-bold tracking-wide">SEO Suite <span class="text-violet-400">.Pro</span></h1>
+        </div>
+        <span class="bg-violet-500/10 text-violet-400 text-xs font-semibold px-3 py-1 rounded-full border border-violet-500/20">
+            Typing Engine
+        </span>
+    </header>
+
+    <main class="max-w-4xl mx-auto w-full space-y-6">
+        
+        <!-- Tool Title -->
+        <div class="text-center space-y-2">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-fuchsia-300">
+                Typing Speed & Accuracy Test
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base">Test and improve your typing skills with Basic, Intermediate, and Advanced lessons.</p>
+        </div>
+
+        <!-- Metrics Dashboard -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-violet-500/20 text-center">
+                <span id="timeLeft" class="text-3xl font-bold text-violet-400">60s</span>
+                <p class="text-xs text-slate-400 uppercase mt-1">Time Left</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-violet-500/20 text-center">
+                <span id="wpm" class="text-3xl font-bold text-violet-400">0</span>
+                <p class="text-xs text-slate-400 uppercase mt-1">Words / Min</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-violet-500/20 text-center">
+                <span id="accuracy" class="text-3xl font-bold text-violet-400">100%</span>
+                <p class="text-xs text-slate-400 uppercase mt-1">Accuracy</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-violet-500/20 text-center">
+                <span id="mistakes" class="text-3xl font-bold text-rose-400">0</span>
+                <p class="text-xs text-slate-400 uppercase mt-1">Mistakes</p>
+            </div>
+        </div>
+
+        <!-- Level Selector & Typing Box -->
+        <div class="bg-slate-900/80 backdrop-blur-md p-6 rounded-2xl border border-violet-500/20 shadow-2xl space-y-6">
+            
+            <!-- Level Buttons -->
+            <div class="flex flex-wrap gap-3 justify-center">
+                <button onclick="setDifficulty('basic')" id="btn-basic" class="level-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-violet-600 text-white shadow-lg transition-all">
+                    🟢 Basic Level
+                </button>
+                <button onclick="setDifficulty('intermediate')" id="btn-intermediate" class="level-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+                    🟡 Intermediate Level
+                </button>
+                <button onclick="setDifficulty('advanced')" id="btn-advanced" class="level-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all">
+                    🔴 Advanced Level
+                </button>
+            </div>
+
+            <!-- Text Display Box (Corrected Layout & Word Wrapping) -->
+            <div id="textDisplay" class="bg-slate-950 p-6 rounded-xl border border-slate-800 text-slate-300 font-mono select-none min-h-[130px] whitespace-normal break-words">
+                Loading practice text...
+            </div>
+
+            <!-- Typing Input Area -->
+            <textarea id="typingInput" rows="3" oninput="startTyping()" disabled class="w-full bg-slate-950 border border-slate-800 rounded-xl p-4 text-slate-100 font-mono text-base focus:outline-none focus:border-violet-500 transition-colors disabled:opacity-50" placeholder="Click 'Start Practice Test' below to begin typing..."></textarea>
+
+            <div class="flex gap-4">
+                <button onclick="initPractice()" id="startBtn" class="w-full bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white font-bold py-3.5 rounded-xl shadow-lg transition-all">
+                    Start Practice Test
+                </button>
+                <button onclick="resetTest()" class="bg-slate-800 hover:bg-slate-700 text-slate-200 px-6 py-3.5 rounded-xl font-semibold border border-slate-700">
+                    Reset
+                </button>
+            </div>
+        </div>
+
+        <!-- Adsterra Smart Link CTA Banner -->
+        <div class="text-center my-6">
+            <a href="https://www.profitableratecpmnetwork.com/h9kp7nq9?key=5406aeab637852633d3e1dc3378eb31e" target="_blank" class="bg-gradient-to-r from-violet-500 to-fuchsia-500 hover:from-violet-600 hover:to-fuchsia-600 text-white font-bold py-3 px-6 rounded-xl shadow-lg inline-block transition-transform transform hover:scale-105">
+                🔥 Get Free Professional Typing & Speed Certification Guide
+            </a>
+        </div>
+
+        <!-- Adsterra 728x90 Banner Code -->
+        <div class="my-6 text-center flex justify-center overflow-hidden">
+            <script>
+              atOptions = {
+                'key' : '675207f1b7b74b061fb68b6a18615412',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+              };
+            </script>
+            <script src="https://canvassanymorephotography.com/675207f1b7b74b061fb68b6a18615412/invoke.js"></script>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="bg-slate-900/80 backdrop-blur-md rounded-2xl p-6 border border-violet-500/30 shadow-xl max-w-4xl mx-auto text-slate-200">
+            <h2 class="text-2xl font-bold mb-6 text-violet-400">Frequently Asked Questions (FAQs)</h2>
+            <div class="space-y-4">
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">1. How is typing speed (WPM) calculated?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Words Per Minute (WPM) is calculated by taking the number of correctly typed words divided by the total time spent typing in minutes.</p>
+                </div>
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">2. What is a good typing speed for professionals?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">An average typing speed is around 40 WPM. Professional typists, programmers, and content writers usually aim for speeds between 60 WPM to 80+ WPM with 95%+ accuracy.</p>
+                </div>
+                <div class="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
+                    <h3 class="font-semibold text-lg text-white mb-2">3. How do the Basic, Intermediate, and Advanced levels differ?</h3>
+                    <p class="text-slate-300 text-sm leading-relaxed">Basic level uses short, simple words. Intermediate introduces complex sentences and common vocabulary, while Advanced incorporates numbers, punctuation, and challenging terminology.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="mt-16 text-center text-xs text-slate-500 border-t border-slate-800/80 pt-6">
+        <p>© 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        const lessons = {
+            basic: "the quick brown fox jumps over the lazy dog simple words keep typing fast and clean practice makes perfect every single day stay focused and keep your hands on home row keys",
+            intermediate: "Mastering the keyboard requires consistent daily practice. Focus on accuracy before speed because precision naturally builds speed over time. Maintain good posture and keep wrists elevated.",
+            advanced: "High-speed typing demands muscle memory! Utilize complex syntax, numbers like 1998 & 2026, punctuation marks, and structural logic; e.g., async/await, APIs, & UTF-8 protocols!"
+        };
+
+        let currentLevel = 'basic';
+        let timer = null;
+        let maxTime = 60;
+        let timeLeft = maxTime;
+        let isTyping = false;
+        let mistakes = 0;
+
+        function setDifficulty(level) {
+            currentLevel = level;
+            document.querySelectorAll('.level-btn').forEach(btn => {
+                btn.className = "level-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-slate-800 text-slate-300 hover:bg-slate-700 transition-all";
+            });
+            document.getElementById(`btn-${level}`).className = "level-btn px-5 py-2.5 rounded-xl font-semibold text-sm bg-violet-600 text-white shadow-lg transition-all";
+            resetTest();
+        }
+
+        function loadText() {
+            const display = document.getElementById('textDisplay');
+            display.innerHTML = '';
+            lessons[currentLevel].split('').forEach(char => {
+                const span = document.createElement('span');
+                if (char === ' ') {
+                    span.innerText = ' ';
+                    span.className = 'space';
+                } else {
+                    span.innerText = char;
+                }
+                display.appendChild(span);
+            });
+        }
+
+        function initPractice() {
+            resetTest();
+            document.getElementById('typingInput').disabled = false;
+            document.getElementById('typingInput').focus();
+            document.getElementById('startBtn').innerText = "Testing in Progress...";
+            document.getElementById('startBtn').disabled = true;
+        }
+
+        function startTyping() {
+            const characters = document.querySelectorAll('#textDisplay span');
+            const typedText = document.getElementById('typingInput').value;
+
+            if (!isTyping && typedText.length > 0) {
+                isTyping = true;
+                timer = setInterval(updateTimer, 1000);
+            }
+
+            mistakes = 0;
+            characters.forEach((charSpan, index) => {
+                const typedChar = typedText[index];
+                if (typedChar == null) {
+                    charSpan.classList.remove('text-emerald-400', 'text-rose-500', 'bg-rose-500/20');
+                } else if (typedChar === charSpan.innerText) {
+                    charSpan.classList.add('text-emerald-400');
+                    charSpan.classList.remove('text-rose-500', 'bg-rose-500/20');
+                } else {
+                    mistakes++;
+                    charSpan.classList.add('text-rose-500', 'bg-rose-500/20');
+                    charSpan.classList.remove('text-emerald-400');
+                }
+            });
+
+            document.getElementById('mistakes').innerText = mistakes;
+            
+            let totalTyped = typedText.length;
+            let accuracyVal = totalTyped > 0 ? Math.max(0, Math.round(((totalTyped - mistakes) / totalTyped) * 100)) : 100;
+            document.getElementById('accuracy').innerText = accuracyVal + '%';
+
+            let elapsedTime = maxTime - timeLeft;
+            let wpmVal = elapsedTime > 0 ? Math.round((((totalTyped - mistakes) / 5) / elapsedTime) * 60) : 0;
+            wpmVal = wpmVal < 0 || !wpmVal || wpmVal === Infinity ? 0 : wpmVal;
+            document.getElementById('wpm').innerText = wpmVal;
+        }
+
+        function updateTimer() {
+            if (timeLeft > 0) {
+                timeLeft--;
+                document.getElementById('timeLeft').innerText = timeLeft + 's';
+            } else {
+                clearInterval(timer);
+                document.getElementById('typingInput').disabled = true;
+                document.getElementById('startBtn').innerText = "Test Completed! Start Again";
+                document.getElementById('startBtn').disabled = false;
+            }
+        }
+
+        function resetTest() {
+            clearInterval(timer);
+            timeLeft = maxTime;
+            isTyping = false;
+            mistakes = 0;
+            document.getElementById('timeLeft').innerText = maxTime + 's';
+            document.getElementById('wpm').innerText = '0';
+            document.getElementById('accuracy').innerText = '100%';
+            document.getElementById('mistakes').innerText = '0';
+            document.getElementById('typingInput').value = '';
+            document.getElementById('typingInput').disabled = true;
+            document.getElementById('startBtn').innerText = "Start Practice Test";
+            document.getElementById('startBtn').disabled = false;
+            loadText();
+        }
+
+        // Initial Load
+        loadText();
+    </script>
+</body>
+</html>
