@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro SEO Meta Tag Generator - Instant Meta Code Creator</title>
+    <meta name="description" content="Generate high-ranking SEO meta tags for your website with ease. Boost your search engine visibility instantly.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #080b11;
+            color: #f3f4f6;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        .glass-card {
+            background: rgba(15, 23, 42, 0.65);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #ffffff 0%, #a5b4fc 50%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between antialiased">
+
+    <!-- Header -->
+    <header class="border-b border-gray-800/80 bg-slate-950/50 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 to-violet-500 flex items-center justify-center font-bold text-white shadow-lg shadow-indigo-500/30">
+                    <i class="fa-solid fa-code text-lg"></i>
+                </div>
+                <span class="text-2xl font-black tracking-tight text-white">SEO Suite<span class="text-indigo-500">.Pro</span></span>
+            </div>
+            <span class="text-xs bg-emerald-950/80 text-emerald-400 px-3 py-1.5 rounded-full border border-emerald-800/60 font-medium">
+                <i class="fa-solid fa-check-circle mr-1"></i> 100% Free Client-Side Tool
+            </span>
+        </div>
+    </header>
+
+    <!-- Top Banner Ad Space -->
+    <div class="my-4 text-center">
+        <!-- ============================================== -->
+        <!-- Paste Your Adsterra / Monetag Top Banner Code Here -->
+        <!-- ============================================== -->
+    </div>
+
+    <!-- Main Content -->
+    <main class="max-w-5xl mx-auto px-4 py-10 w-full">
+        <!-- Title Section -->
+        <div class="text-center mb-10">
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-3 gradient-text">
+                SEO Meta Tag Generator
+            </h1>
+            <p class="text-gray-400 max-w-xl mx-auto text-sm sm:text-base">
+                Create search engine friendly meta tags for your website or blog in seconds.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-8">
+            <!-- Form Input Card -->
+            <div class="glass-card p-6 sm:p-8 rounded-3xl space-y-5">
+                <h3 class="text-lg font-bold text-white flex items-center gap-2 border-b border-gray-800 pb-3">
+                    <i class="fa-solid fa-pen-to-square text-indigo-400"></i> Website Information
+                </h3>
+                
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Site Title</label>
+                    <input type="text" id="siteTitle" placeholder="My Awesome Website" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Site Description</label>
+                    <textarea id="siteDesc" rows="3" placeholder="Describe your site in 150-160 characters..." class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition"></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-semibold uppercase text-gray-400 mb-2">Keywords (Separated with commas)</label>
+                    <input type="text" id="siteKeywords" placeholder="seo, free tools, blogging, ranking" class="w-full bg-slate-950/80 border border-gray-800 rounded-xl p-3.5 text-gray-200 placeholder-gray-600 focus:outline-none focus:border-indigo-500 text-sm transition">
+                </div>
+
+                <button onclick="generateTags()" class="w-full bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold py-3.5 rounded-xl shadow-lg shadow-indigo-600/30 transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i> Generate Meta Code
+                </button>
+            </div>
+
+            <!-- Generated Output Card -->
+            <div class="glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between">
+                <div>
+                    <div class="flex justify-between items-center border-b border-gray-800 pb-3 mb-4">
+                        <h3 class="text-lg font-bold text-white flex items-center gap-2">
+                            <i class="fa-solid fa-code text-emerald-400"></i> HTML Output
+                        </h3>
+                        <span class="text-xs text-gray-500 font-mono">Ready to Copy</span>
+                    </div>
+                    <textarea id="outputCode" readonly rows="10" class="w-full bg-slate-950/90 border border-gray-800 rounded-xl p-4 text-emerald-400 font-mono text-xs focus:outline-none resize-none leading-relaxed" placeholder="Click 'Generate Meta Code' to create tags..."></textarea>
+                </div>
+
+                <button onclick="copyCode()" class="mt-4 w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-medium py-3 rounded-xl transition border border-gray-700 flex items-center justify-center gap-2 text-sm">
+                    <i class="fa-solid fa-copy"></i> Copy Code to Clipboard
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bottom Banner Ad Space -->
+    <div class="my-4 text-center">
+        <!-- ============================================== -->
+        <!-- Paste Your Adsterra / Monetag Bottom Banner Code Here -->
+        <!-- ============================================== -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-t border-gray-800/80 py-6 bg-slate-950/40 text-center text-gray-500 text-xs">
+        <p>&copy; 2026 SEO Suite. Pro Utility Suite. Hosted on GitHub Pages.</p>
+    </footer>
+
+    <!-- Logic Script -->
+    <script>
+        function generateTags() {
+            const title = document.getElementById('siteTitle').value.trim() || 'My Website Title';
+            const desc = document.getElementById('siteDesc').value.trim();
+            const keywords = document.getElementById('siteKeywords').value.trim();
+
+            let meta = `<!-- Primary SEO Meta Tags -->\n`;
+            meta += `<title>${title}</title>\n`;
+            meta += `<meta name="title" content="${title}">\n`;
+            if (desc) meta += `<meta name="description" content="${desc}">\n`;
+            if (keywords) meta += `<meta name="keywords" content="${keywords}">\n`;
+            meta += `<meta name="robots" content="index, follow">\n`;
+            meta += `<meta http-equiv="Content-Type" content="text/html; charset=utf-8">\n`;
+            meta += `<meta name="language" content="English">\n`;
+
+            document.getElementById('outputCode').value = meta;
+        }
+
+        function copyCode() {
+            const output = document.getElementById('outputCode');
+            if (!output.value) return;
+            output.select();
+            document.execCommand('copy');
+            alert('Meta tags copied to clipboard!');
+        }
+    </script>
+</body>
+</html>
