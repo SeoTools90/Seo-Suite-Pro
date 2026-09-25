@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Suite .Pro - JSON-LD Schema Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- PAGE-LEVEL FAQ SCHEMA FOR SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is a JSON-LD Schema Generator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A JSON-LD Schema Generator is a tool that creates structured data code in JSON-LD format to help search engines understand your website content better."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where do I paste the generated JSON-LD code?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Paste the generated JSON-LD script tag inside the <head> section of your web page HTML code."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+        body { background-color: #070913; color: #ffffff; min-height: 100vh; padding: 30px 20px; position: relative; }
+        
+        .floating-ad-widget { position: fixed; top: 20px; right: 20px; background-color: #171b26; border: 1px solid #2a3142; border-radius: 10px; padding: 12px; max-width: 380px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); z-index: 9999; }
+        .badge-count { position: absolute; top: -8px; right: -8px; background-color: #ff2a5f; color: #fff; font-size: 11px; font-weight: 700; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .ad-content { display: flex; gap: 12px; align-items: center; }
+        .ad-img-box img { width: 55px; height: 55px; border-radius: 6px; object-fit: cover; }
+        .ad-title { font-size: 0.8rem; font-weight: 600; color: #e2e8f0; line-height: 1.3; margin-bottom: 6px; }
+        .ad-footer { display: flex; justify-content: space-between; font-size: 0.75rem; }
+        .ad-link { color: #93c5fd; text-decoration: none; font-weight: 600; }
+        .ad-hide { color: #64748b; cursor: pointer; }
+
+        .top-header { display: flex; justify-content: space-between; align-items: center; max-width: 850px; margin: 0 auto 30px auto; }
+        .brand-container { display: flex; align-items: center; gap: 12px; }
+        .brand-logo-icon { background: linear-gradient(135deg, #a82858, #e11d48); width: 46px; height: 46px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #ffffff; }
+        .brand-name { font-size: 1.6rem; font-weight: 800; color: #ffffff; letter-spacing: -0.5px; }
+        .brand-pro { color: #ff3b6b; }
+        .nav-link { color: #f59e0b; text-decoration: none; font-size: 0.88rem; font-weight: 600; border: 1px solid #f59e0b; padding: 6px 14px; border-radius: 8px; }
+
+        .main-wrapper { max-width: 850px; margin: 0 auto; }
+        .hero-section { text-align: center; margin-bottom: 25px; }
+        .gradient-title { font-size: 2.3rem; font-weight: 800; background: linear-gradient(90deg, #ff6b52, #f59e0b); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 8px; }
+        .hero-subtitle { color: #94a3b8; font-size: 0.95rem; }
+
+        .tool-card { background-color: #0d121f; border: 1px solid #1e2738; border-radius: 16px; padding: 30px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4); }
+        .form-group { margin-bottom: 20px; }
+        .input-label { display: block; font-size: 0.88rem; font-weight: 600; color: #cbd5e1; margin-bottom: 8px; }
+        .dark-input, .dark-textarea { width: 100%; background-color: #05070e; border: 1px solid #1a2333; border-radius: 10px; color: #e2e8f0; padding: 12px 16px; font-size: 0.9rem; outline: none; transition: border 0.2s; }
+        .dark-input:focus, .dark-textarea:focus { border-color: #ff6b52; }
+        .dark-textarea { height: 220px; font-family: monospace; resize: vertical; }
+        .small-textarea { height: 80px; }
+
+        .gradient-btn { width: 100%; background: linear-gradient(90deg, #ff4155 0%, #f59e0b 100%); border: none; border-radius: 12px; color: #ffffff; font-size: 1.05rem; font-weight: 700; padding: 16px; cursor: pointer; margin-top: 10px; margin-bottom: 20px; transition: opacity 0.2s; box-shadow: 0 6px 20px rgba(255, 65, 85, 0.3); }
+        .gradient-btn:hover { opacity: 0.92; }
+        .copy-code-btn { background-color: #1e293b; color: #ffffff; border: 1px solid #334155; padding: 8px 16px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; cursor: pointer; margin-top: 8px; }
+        
+        .ad-banner-section { max-width: 850px; margin: 30px auto 0 auto; }
+        .ad-placeholder-box { border: 1px dashed #2d3748; background-color: #0d121f; padding: 20px; text-align: center; color: #64748b; font-size: 0.8rem; font-weight: 600; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="floating-ad-widget">
+        <span class="badge-count">1</span>
+        <div class="ad-content">
+            <div class="ad-img-box"><img src="https://via.placeholder.com/60" alt="Ad Thumbnail"></div>
+            <div class="ad-text-box">
+                <p class="ad-title">"Don't worry, here's how to SAVE your FB account if it was hacked"</p>
+                <div class="ad-footer">
+                    <a href="#" class="ad-link">Click Here</a>
+                    <span class="ad-hide" onclick="this.parentElement.parentElement.parentElement.parentElement.style.display='none'">Hide</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="top-header">
+        <div class="brand-container">
+            <div class="brand-logo-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="brand-name">SEO Suite <span class="brand-pro">.Pro</span></div>
+        </div>
+        <a href="llms-generator.html" class="nav-link">Switch to llms.txt Generator →</a>
+    </header>
+
+    <main class="main-wrapper">
+        <div class="hero-section">
+            <h1 class="gradient-title">JSON-LD Schema Generator</h1>
+            <p class="hero-subtitle">Generate rich snippet structured data for Google & Search Engines.</p>
+        </div>
+
+        <div class="tool-card">
+            <div class="form-group">
+                <label class="input-label">Select Schema Type:</label>
+                <select id="schemaType" class="dark-input" onchange="renderSchemaFields()">
+                    <option value="Article">Article / Blog Post</option>
+                    <option value="Product">Product / E-commerce</option>
+                    <option value="Organization">Organization / Business</option>
+                    <option value="FAQPage">FAQ Page</option>
+                </select>
+            </div>
+
+            <div id="dynamicFields"></div>
+
+            <button class="gradient-btn" onclick="generateJSONLD()">Generate JSON-LD Schema</button>
+
+            <div class="output-wrapper">
+                <label class="input-label">Generated JSON-LD Code:</label>
+                <textarea id="jsonldOutput" class="dark-textarea" readonly placeholder="// Output JSON-LD code will appear here..."></textarea>
+                <button class="copy-code-btn" onclick="copyText('jsonldOutput')">Copy Schema Code</button>
+            </div>
+        </div>
+    </main>
+
+    <div class="ad-banner-section">
+        <div class="ad-placeholder-box">SPONSORED ADVERTISEMENT AREA</div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", renderSchemaFields);
+
+        function renderSchemaFields() {
+            const type = document.getElementById("schemaType").value;
+            const container = document.getElementById("dynamicFields");
+
+            if (type === "Article") {
+                container.innerHTML = `
+                    <div class="form-group"><label class="input-label">Article Title:</label><input type="text" id="artTitle" class="dark-input" placeholder="e.g. How to Fix Error 404 in WordPress"></div>
+                    <div class="form-group"><label class="input-label">Author Name:</label><input type="text" id="artAuthor" class="dark-input" placeholder="e.g. John Doe"></div>
+                    <div class="form-group"><label class="input-label">Publisher Name:</label><input type="text" id="artPublisher" class="dark-input" placeholder="e.g. ErrorFixApp"></div>
+                `;
+            } else if (type === "Product") {
+                container.innerHTML = `
+                    <div class="form-group"><label class="input-label">Product Name:</label><input type="text" id="prodTitle" class="dark-input" placeholder="e.g. Desk Setup Ergonomic Stand"></div>
+                    <div class="form-group"><label class="input-label">Price (USD):</label><input type="text" id="prodPrice" class="dark-input" placeholder="e.g. 49.99"></div>
+                `;
+            } else if (type === "Organization") {
+                container.innerHTML = `
+                    <div class="form-group"><label class="input-label">Organization Name:</label><input type="text" id="orgName" class="dark-input" placeholder="e.g. DeskCraft Lab"></div>
+                    <div class="form-group"><label class="input-label">Website URL:</label><input type="text" id="orgUrl" class="dark-input" placeholder="https://example.com"></div>
+                `;
+            } else if (type === "FAQPage") {
+                container.innerHTML = `
+                    <div class="form-group"><label class="input-label">Question 1:</label><input type="text" id="faqQ1" class="dark-input" placeholder="e.g. What is JSON-LD?"></div>
+                    <div class="form-group"><label class="input-label">Answer 1:</label><textarea id="faqA1" class="dark-textarea small-textarea" placeholder="e.g. It is a structured data format."></textarea></div>
+                    <div class="form-group"><label class="input-label">Question 2:</label><input type="text" id="faqQ2" class="dark-input" placeholder="e.g. Is it free?"></div>
+                    <div class="form-group"><label class="input-label">Answer 2:</label><textarea id="faqA2" class="dark-textarea small-textarea" placeholder="e.g. Yes, 100% free."></textarea></div>
+                `;
+            }
+        }
+
+        function generateJSONLD() {
+            const type = document.getElementById("schemaType").value;
+            let schemaObj = {};
+
+            if (type === "Article") {
+                schemaObj = { "@context": "https://schema.org", "@type": "Article", "headline": document.getElementById("artTitle")?.value || "", "author": { "@type": "Person", "name": document.getElementById("artAuthor")?.value || "" }, "publisher": { "@type": "Organization", "name": document.getElementById("artPublisher")?.value || "" } };
+            } else if (type === "Product") {
+                schemaObj = { "@context": "https://schema.org", "@type": "Product", "name": document.getElementById("prodTitle")?.value || "", "offers": { "@type": "Offer", "priceCurrency": "USD", "price": document.getElementById("prodPrice")?.value || "0.00" } };
+            } else if (type === "Organization") {
+                schemaObj = { "@context": "https://schema.org", "@type": "Organization", "name": document.getElementById("orgName")?.value || "", "url": document.getElementById("orgUrl")?.value || "" };
+            } else if (type === "FAQPage") {
+                const q1 = document.getElementById("faqQ1")?.value || "";
+                const a1 = document.getElementById("faqA1")?.value || "";
+                const q2 = document.getElementById("faqQ2")?.value || "";
+                const a2 = document.getElementById("faqA2")?.value || "";
+                const mainEntity = [];
+                if (q1 && a1) mainEntity.push({ "@type": "Question", "name": q1, "acceptedAnswer": { "@type": "Answer", "text": a1 } });
+                if (q2 && a2) mainEntity.push({ "@type": "Question", "name": q2, "acceptedAnswer": { "@type": "Answer", "text": a2 } });
+                schemaObj = { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": mainEntity };
+            }
+
+            document.getElementById("jsonldOutput").value = `<script type="application/ld+json">\n${JSON.stringify(schemaObj, null, 2)}\n<\/script>`;
+        }
+
+        function copyText(id) {
+            const textarea = document.getElementById(id);
+            if (!textarea.value) return;
+            textarea.select();
+            navigator.clipboard.writeText(textarea.value);
+            alert("Copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
